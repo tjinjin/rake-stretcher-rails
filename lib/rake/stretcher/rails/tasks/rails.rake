@@ -19,7 +19,7 @@ namespace :stretcher do
         bundle install \
         --gemfile #{local_build_path}/Gemfile \
         --deployment --path vendor/bundle -j 4 \
-        --without development test RAILS_ENV="#{rails_env}"
+        --without development test RAILS_ENV="#{environment}"
       EOC
     end
   end
@@ -28,7 +28,7 @@ namespace :stretcher do
   task :assets_precompile do
     sh <<-EOC
       cd #{local_build_path}
-      bundle exec rake assets:precompile RAILS_ENV="#{rails_env}"
+      bundle exec rake assets:precompile RAILS_ENV="#{environment}"
     EOC
   end
 end
