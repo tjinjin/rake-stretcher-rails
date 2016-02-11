@@ -1,1 +1,1 @@
-load File.expand_path("../../rake/stretcher/rails/tasks/rails.rake", __FILE__)
+load File.expand_path("../../../rake/stretcher/rails/tasks/rails.rake", __FILE__)
